@@ -3,6 +3,13 @@ import path from 'path';
 import Users from './collections/Users';
 import { payloadCloud } from '@payloadcms/plugin-cloud';
 import BeforeDashboard from './components/BeforeDashboard';
+import  Media  from './collections/Media';
+import GaleriaKep from './collections/GaleriaKep';
+import Eloadasok from './collections/Eloadasok';
+import Munkatars from './collections/Munkatars';
+import Szereplo from './collections/Szereplo';
+import Kozremukodok from './collections/Kozremukodok';
+import Musor from './collections/Musor';
 
 export default buildConfig({
   admin: {
@@ -15,6 +22,13 @@ export default buildConfig({
   },
   collections: [
     Users,
+    Eloadasok,
+    Munkatars,
+    Szereplo,
+    Kozremukodok,
+    Musor,
+    Media,
+    GaleriaKep,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
