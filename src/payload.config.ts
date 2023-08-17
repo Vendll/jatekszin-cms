@@ -1,7 +1,6 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
 import Users from './collections/Users';
-import { payloadCloud } from '@payloadcms/plugin-cloud';
 import BeforeDashboard from './components/BeforeDashboard';
 import  Media  from './collections/Media';
 import GaleriaKep from './collections/GaleriaKep';
@@ -36,7 +35,5 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  plugins: [
-    payloadCloud()
-  ]
+  plugins: []
 });
