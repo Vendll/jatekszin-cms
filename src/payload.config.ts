@@ -1,6 +1,8 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
 import Users from './collections/Users';
+import seo from '@payloadcms/plugin-seo'
+import type { GenerateTitle } from '@payloadcms/plugin-seo/types'
 import BeforeDashboard from './components/BeforeDashboard';
 import  Media  from './collections/Media';
 import GaleriaKep from './collections/GaleriaKep';
@@ -9,6 +11,18 @@ import Munkatars from './collections/Munkatars';
 import Szereplo from './collections/Szereplo';
 import Kozremukodok from './collections/Kozremukodok';
 import Musor from './collections/Musor';
+
+const generateTitle = ({ doc }) => {
+  return `${doc.title.value} - Játékszín`
+}
+
+const generateDescription = ({ doc }) => {
+  return doc.description.value
+}
+
+const generateImage = ({ doc }) => {
+  return doc.hero.value
+}
 
 export default buildConfig({
   admin: {
@@ -35,5 +49,12 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  plugins: []
+  plugins: [seo({
+    collections: ['eloadasok'],
+    generateTitle,
+    generateDescription,
+    generateImage,
+    uploadsCollection: 'media',
+    tabbedUI: true,
+  }),]
 });
