@@ -11,6 +11,10 @@ import Munkatars from './collections/Munkatars';
 import Szereplo from './collections/Szereplo';
 import Kozremukodok from './collections/Kozremukodok';
 import Musor from './collections/Musor';
+import Kezdolap from './globals/Kezdolap';
+import Menu from './globals/Menu';
+import Hirek from './collections/Hirek';
+import search from "@payloadcms/plugin-search";
 
 const generateTitle = ({ doc }) => {
   return `${doc.title.value} - Játékszín`
@@ -21,8 +25,12 @@ const generateDescription = ({ doc }) => {
 }
 
 const generateImage = ({ doc }) => {
-  return doc.hero.value
+  if (doc.hero.value) {
+    return doc.hero.value
+  }
+  return doc.thumbnail.value
 }
+
 
 export default buildConfig({
   admin: {
@@ -42,6 +50,11 @@ export default buildConfig({
     Musor,
     Media,
     GaleriaKep,
+    Hirek,
+  ],
+  globals: [
+    Menu,
+    Kezdolap,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
@@ -50,11 +63,30 @@ export default buildConfig({
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
   plugins: [seo({
-    collections: ['eloadasok'],
+    collections: ['eloadasok', 'hirek'],
+    globals: ['kezdolap'],
     generateTitle,
     generateDescription,
     generateImage,
+    generateURL: ({ doc }: any) => {
+      console.log(doc);
+      if (doc.fields.author) {
+        console.log("Előadás");
+        return `http://localhost:3000/eloadasok/${doc.fields.slug.value}`
+      }
+      else if (doc.fields.content) {
+        console.log("Hír");
+        return `http://localhost:3000/hirek/${doc.fields.slug.value}`
+      }
+      else if (doc.fields.heroes) {
+        console.log("Kezdőlap");
+        return `http://localhost:3000/`
+      } else {
+        console.log("Nincs ilyen collection");
+      }
+    },
     uploadsCollection: 'media',
     tabbedUI: true,
-  }),]
+  }),
+ ]
 });

@@ -86,6 +86,13 @@ const Eloadasok: CollectionConfig = {
                         required: true,
                     },
                     {
+                        name: 'heroMobile',
+                        label: 'Hero mobil',
+                        type: 'upload',
+                        relationTo: 'media',
+                        required: true,
+                    },
+                    {
                         name: 'thumbnail',
                         label: 'Thumbnail',
                         type: 'upload',
