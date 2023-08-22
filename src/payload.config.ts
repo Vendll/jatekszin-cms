@@ -16,6 +16,8 @@ import Menu from './globals/Menu';
 import Hirek from './collections/Hirek';
 import search from "@payloadcms/plugin-search";
 
+
+
 const generateTitle = ({ doc }) => {
   return `${doc.title.value} - Játékszín`
 }
@@ -62,7 +64,8 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  plugins: [seo({
+  plugins: [
+    seo({
     collections: ['eloadasok', 'hirek'],
     globals: ['kezdolap'],
     generateTitle,
