@@ -1,8 +1,7 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
 import Users from './collections/Users';
-import seo from '@payloadcms/plugin-seo'
-import type { GenerateTitle } from '@payloadcms/plugin-seo/types'
+import seo from '@payloadcms/plugin-seo';
 import BeforeDashboard from './components/BeforeDashboard';
 import  Media  from './collections/Media';
 import GaleriaKep from './collections/GaleriaKep';
