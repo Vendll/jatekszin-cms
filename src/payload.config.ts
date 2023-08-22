@@ -14,7 +14,6 @@ import Musor from './collections/Musor';
 import Kezdolap from './globals/Kezdolap';
 import Menu from './globals/Menu';
 import Hirek from './collections/Hirek';
-import search from "@payloadcms/plugin-search";
 
 
 
