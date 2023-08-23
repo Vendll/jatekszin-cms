@@ -58,8 +58,7 @@ export const Hirek: CollectionConfig = {
 							label: 'Thumbnail',
 							type: 'upload',
 							relationTo: 'media',
-							required: true,
-							validate: (value) => validateImageSize(value)
+							required: true
 						},
 						{
 							name: 'hero',
