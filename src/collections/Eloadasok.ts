@@ -105,6 +105,12 @@ const Eloadasok: CollectionConfig = {
 							required: true
 						},
 						{
+							name: 'video',
+							label: 'Videó',
+							type: 'text',
+							required: false
+						},
+						{
 							name: 'galeria',
 							label: 'Galéria',
 							type: 'array',
