@@ -107,7 +107,8 @@ const Eloadasok: CollectionConfig = {
 						{
 							name: 'video',
 							label: 'Videó',
-							type: 'text',
+							type: 'upload',
+							relationTo: 'videos',
 							required: false
 						},
 						{

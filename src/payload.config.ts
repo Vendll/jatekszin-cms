@@ -12,6 +12,7 @@ import Kozremukodok from './collections/Kozremukodok';
 import Musor from './collections/Musor';
 import Hirek from './collections/Hirek';
 import Files from './collections/Files';
+import Videos from './collections/Videos';
 
 import Menu from './globals/Menu';
 import Kezdolap from './globals/Kezdolap';
@@ -73,7 +74,8 @@ export default buildConfig({
 		Media,
 		GaleriaKep,
 		Hirek,
-		Files
+		Files,
+		Videos
 	],
 	globals: [
 		Menu,
@@ -121,6 +123,12 @@ export default buildConfig({
 					}
 				},
 				files: {
+					adapter: s3Adapter(s3AdapterConfig),
+					generateFileURL: ({ filename }) => {
+						return `${process.env.S3_ENDPOINT}/${process.env.S3_BUCKET}/${filename}`;
+					}
+				},
+				videos: {
 					adapter: s3Adapter(s3AdapterConfig),
 					generateFileURL: ({ filename }) => {
 						return `${process.env.S3_ENDPOINT}/${process.env.S3_BUCKET}/${filename}`;
