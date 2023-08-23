@@ -152,7 +152,7 @@ const Eloadasok: CollectionConfig = {
 	],
 	endpoints: [
 		{
-			path: 'slug/:slug',
+			path: '/slug/:slug',
 			method: 'get',
 			handler: async (req, res, next) => {
 				const { slug } = req.params;

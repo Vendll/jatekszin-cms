@@ -71,6 +71,7 @@ export default buildConfig({
 	graphQL: {
 		schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql')
 	},
+	cors: [process.env.PAYLOAD_PUBLIC_SITE_URL],
 	plugins: [
 		seo({
 			collections: ['eloadasok', 'hirek'],
