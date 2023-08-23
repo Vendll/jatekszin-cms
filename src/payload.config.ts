@@ -10,9 +10,19 @@ import Munkatars from './collections/Munkatars';
 import Szereplo from './collections/Szereplo';
 import Kozremukodok from './collections/Kozremukodok';
 import Musor from './collections/Musor';
-import Kezdolap from './globals/Kezdolap';
-import Menu from './globals/Menu';
 import Hirek from './collections/Hirek';
+import Files from './collections/Files';
+
+import Menu from './globals/Menu';
+import Kezdolap from './globals/Kezdolap';
+import HirekOldal from './globals/HirekPage';
+import EloadasokOldal from './globals/EloadasokPage';
+import MusorOldal from './globals/MusorPage';
+import TarsulatOldal from './globals/TarsulatPage';
+import JegyekOldal from './globals/JegyekPage';
+import JatekszinOldal from './globals/JatekszinPage';
+import KapcsolatOldal from './globals/KapcsolatPage';
+
 import { cloudStorage } from '@payloadcms/plugin-cloud-storage';
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3';
 
@@ -62,9 +72,20 @@ export default buildConfig({
 		Musor,
 		Media,
 		GaleriaKep,
-		Hirek
+		Hirek,
+		Files
 	],
-	globals: [Menu, Kezdolap],
+	globals: [
+		Menu,
+		Kezdolap,
+		HirekOldal,
+		EloadasokOldal,
+		MusorOldal,
+		TarsulatOldal,
+		JegyekOldal,
+		JatekszinOldal,
+		KapcsolatOldal
+	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts')
 	},
@@ -75,31 +96,31 @@ export default buildConfig({
 	plugins: [
 		seo({
 			collections: ['eloadasok', 'hirek'],
-			globals: ['kezdolap'],
+			globals: [
+				'kezdolap',
+				'hirek-oldal',
+				'eloadasok-oldal',
+				'musor-oldal',
+				'tarsulat-oldal',
+				'jegyek-oldal',
+				'jatekszin-oldal',
+				'kapcsolat-oldal'
+			],
 			generateTitle,
 			generateDescription,
 			generateImage,
-			generateURL: ({ doc }: any) => {
-				console.log(doc);
-				if (doc.fields.author) {
-					console.log('Előadás');
-					return `http://localhost:3000/eloadasok/${doc.fields.slug.value}`;
-				} else if (doc.fields.content) {
-					console.log('Hír');
-					return `http://localhost:3000/hirek/${doc.fields.slug.value}`;
-				} else if (doc.fields.heroes) {
-					console.log('Kezdőlap');
-					return `http://localhost:3000/`;
-				} else {
-					console.log('Nincs ilyen collection');
-				}
-			},
 			uploadsCollection: 'media',
 			tabbedUI: true
 		}),
 		cloudStorage({
 			collections: {
 				media: {
+					adapter: s3Adapter(s3AdapterConfig),
+					generateFileURL: ({ filename }) => {
+						return `${process.env.S3_ENDPOINT}/${process.env.S3_BUCKET}/${filename}`;
+					}
+				},
+				files: {
 					adapter: s3Adapter(s3AdapterConfig),
 					generateFileURL: ({ filename }) => {
 						return `${process.env.S3_ENDPOINT}/${process.env.S3_BUCKET}/${filename}`;
