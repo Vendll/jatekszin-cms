@@ -14,6 +14,13 @@ const Musor: CollectionConfig = {
 	},
 	fields: [
 		{
+			name: 'eloadasok',
+			label: 'Előadás',
+			type: 'relationship',
+			relationTo: 'eloadasok',
+			required: true
+		},
+		{
 			name: 'date',
 			label: 'Dátum',
 			type: 'date',
@@ -47,6 +54,26 @@ const Musor: CollectionConfig = {
 			label: 'Zártkörű',
 			type: 'checkbox',
 			required: false
+		}
+	],
+	endpoints: [
+		{
+			path: '/eloadasszerint/:id',
+			method: 'get',
+			handler: async (req, res, next) => {
+				const { id } = req.params;
+				const musor = await req.payload.find({
+					collection: 'musor',
+					depth: 1,
+					limit: 9999,
+					where: {
+						eloadasok: {
+							equals: id
+						}
+					}
+				});
+				res.send(musor);
+			}
 		}
 	]
 };

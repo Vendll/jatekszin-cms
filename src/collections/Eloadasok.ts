@@ -126,22 +126,6 @@ const Eloadasok: CollectionConfig = {
 							]
 						}
 					]
-				},
-				{
-					label: 'Műsor',
-					fields: [
-						{
-							name: 'musor',
-							label: 'Műsor',
-							type: 'relationship',
-							relationTo: ['musor'],
-							hasMany: true,
-							required: true,
-							admin: {
-								allowCreate: true
-							}
-						}
-					]
 				}
 			]
 		},
