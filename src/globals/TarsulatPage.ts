@@ -2,7 +2,7 @@ import { GlobalConfig } from 'payload/types';
 
 const TarsulatOldal: GlobalConfig = {
 	slug: 'tarsulat-oldal',
-	label: 'Műsor oldal',
+	label: 'Társulat oldal',
 	access: {
 		read: () => true
 	},
