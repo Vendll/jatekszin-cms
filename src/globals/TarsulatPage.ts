@@ -25,6 +25,12 @@ const TarsulatOldal: GlobalConfig = {
 							type: 'upload',
 							relationTo: 'media',
 							required: true
+						},
+						{
+							name: 'content',
+							label: 'Tartalom',
+							type: 'richText',
+							required: true
 						}
 					]
 				}
