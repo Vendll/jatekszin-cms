@@ -24,18 +24,32 @@ const Kezdolap: GlobalConfig = {
 									type: 'relationship',
 									relationTo: ['eloadasok', 'hirek'],
 									validate: async (value, { operation }) => {
+										console.log(process.env.NODE_ENV);
+
 										if (value) {
 											let resp;
 											if (value.relationTo === 'eloadasok') {
 												console.log(
-													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/eloadasok/${value.value}`
+													`${
+														process.env.NODE_ENV === 'development'
+															? 'http://localhost:3000'
+															: 'https://admin.jatekszin.hu'
+													}/api/eloadasok/${value.value}`
 												);
 												resp = await fetch(
-													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/eloadasok/${value.value}`
+													`${
+														process.env.NODE_ENV === 'development'
+															? 'http://localhost:3000'
+															: 'https://admin.jatekszin.hu'
+													}/api/eloadasok/${value.value}`
 												);
 											} else if (value.relationTo === 'hirek') {
 												resp = await fetch(
-													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/hirek/${value.value}`
+													`${
+														process.env.NODE_ENV === 'development'
+															? 'http://localhost:3000'
+															: 'https://admin.jatekszin.hu'
+													}/api/hirek/${value.value}`
 												);
 											} else {
 												return 'Nem megfelelő collection: ' + value[0].collection;
