@@ -28,6 +28,29 @@ export const Media: CollectionConfig = {
 			admin: {
 				elements: ['link']
 			}
+		},
+		{
+			name: 'size',
+			type: 'select',
+			options: [
+				{ label: 'Kicsi', value: 'small' },
+				{ label: 'Közepes', value: 'medium' },
+				{ label: 'Nagy', value: 'large' },
+				{ label: 'Extra nagy', value: 'xlarge' }
+			],
+			required: false,
+			defaultValue: 'medium'
+		},
+		{
+			name: 'position',
+			type: 'select',
+			options: [
+				{ label: 'Balra', value: 'left' },
+				{ label: 'Középen', value: 'center' },
+				{ label: 'Jobbra', value: 'right' }
+			],
+			required: false,
+			defaultValue: 'center'
 		}
 	]
 };
