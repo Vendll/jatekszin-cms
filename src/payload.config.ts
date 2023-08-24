@@ -105,7 +105,7 @@ export default buildConfig({
 				'musor-oldal',
 				'tarsulat-oldal',
 				'jegyek-oldal',
-				'jatekszin-oldal',
+				'Jatekszin-oldal',
 				'kapcsolat-oldal'
 			],
 			generateTitle,
