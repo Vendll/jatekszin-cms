@@ -24,25 +24,28 @@ const Kezdolap: GlobalConfig = {
 									type: 'relationship',
 									relationTo: ['eloadasok', 'hirek'],
 									validate: async (value, { operation }) => {
-										console.log(operation);
-
 										if (value) {
 											let resp;
-											if (value[0].relationTo === 'eloadasok') {
-												resp = await fetch(`http://localhost:3000/api/eloadasok/${value[0].value}`);
-											} else if (value[0].relationTo === 'hirek') {
-												resp = await fetch(`http://localhost:3000/api/hirek/${value[0].value}`);
+											if (value.relationTo === 'eloadasok') {
+												resp = await fetch(
+													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/eloadasok/${value.value}`
+												);
+											} else if (value.relationTo === 'hirek') {
+												resp = await fetch(
+													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/hirek/${value.value}`
+												);
 											} else {
 												return 'Nem megfelelő collection: ' + value[0].collection;
 											}
 											const { hero, heroMobile } = await resp.json();
 											if (!hero || !heroMobile) {
 												return 'Nincs hero és/vagy mobil hero kép';
+											} else {
+												console.log('ok');
 											}
 										}
 									},
-									required: true,
-									hasMany: true
+									required: true
 								},
 								{
 									name: 'position',

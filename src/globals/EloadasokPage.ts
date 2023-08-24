@@ -14,6 +14,12 @@ const EloadasokOldal: GlobalConfig = {
 					label: 'Tartalom',
 					fields: [
 						{
+							name: 'title',
+							label: 'Cím',
+							type: 'text',
+							required: true
+						},
+						{
 							name: 'banner',
 							label: 'Banner',
 							type: 'upload',
