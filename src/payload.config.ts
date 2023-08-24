@@ -13,6 +13,7 @@ import Musor from './collections/Musor';
 import Hirek from './collections/Hirek';
 import Files from './collections/Files';
 import Videos from './collections/Videos';
+import Partner from './collections/Partner';
 
 import Menu from './globals/Menu';
 import Kezdolap from './globals/Kezdolap';
@@ -75,7 +76,8 @@ export default buildConfig({
 		GaleriaKep,
 		Hirek,
 		Files,
-		Videos
+		Videos,
+		Partner
 	],
 	globals: [
 		Menu,
