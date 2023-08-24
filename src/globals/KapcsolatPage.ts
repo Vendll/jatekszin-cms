@@ -27,7 +27,7 @@ const KapcsolatOldal: GlobalConfig = {
 							required: true
 						},
 						{
-							name: 'contact-infos',
+							name: 'contactInfos',
 							label: 'Kapcsolat információk',
 							type: 'array',
 							fields: [
