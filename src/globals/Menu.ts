@@ -49,6 +49,18 @@ const Menu: GlobalConfig = {
 			label: 'TikTok link',
 			type: 'text',
 			required: true
+		},
+		{
+			name: 'youtubeLink',
+			label: 'YouTube link',
+			type: 'text',
+			required: true
+		},
+		{
+			name: 'jegyLink',
+			label: 'Jegy link',
+			type: 'text',
+			required: true
 		}
 	]
 };
