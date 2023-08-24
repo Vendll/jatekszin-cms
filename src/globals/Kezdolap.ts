@@ -27,6 +27,9 @@ const Kezdolap: GlobalConfig = {
 										if (value) {
 											let resp;
 											if (value.relationTo === 'eloadasok') {
+												console.log(
+													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/eloadasok/${value.value}`
+												);
 												resp = await fetch(
 													`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/eloadasok/${value.value}`
 												);
