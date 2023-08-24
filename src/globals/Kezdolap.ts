@@ -79,6 +79,16 @@ const Kezdolap: GlobalConfig = {
 										{ label: 'Középen felül', value: 'top-middle' },
 										{ label: 'Középen alul', value: 'bottom-middle' }
 									]
+								},
+								{
+									name: 'szin',
+									label: 'Szín',
+									type: 'select',
+									options: [
+										{ label: 'Piros', value: 'piros' },
+										{ label: 'Kék', value: 'kek' }
+									],
+									defaultValue: 'piros'
 								}
 							]
 						},

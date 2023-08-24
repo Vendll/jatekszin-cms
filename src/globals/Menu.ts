@@ -25,6 +25,30 @@ const Menu: GlobalConfig = {
 					required: true
 				}
 			]
+		},
+		{
+			name: 'facebookLink',
+			label: 'Facebook link',
+			type: 'text',
+			required: true
+		},
+		{
+			name: 'instagramLink',
+			label: 'Instagram link',
+			type: 'text',
+			required: true
+		},
+		{
+			name: 'youtubeLink',
+			label: 'Youtube link',
+			type: 'text',
+			required: true
+		},
+		{
+			name: 'tiktokLink',
+			label: 'TikTok link',
+			type: 'text',
+			required: true
 		}
 	]
 };
