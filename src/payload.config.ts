@@ -104,7 +104,7 @@ export default buildConfig({
 				'kezdolap',
 				'hirek-oldal',
 				'eloadasok-oldal',
-				'musor-oldal',
+				'musorok-oldal',
 				'tarsulat-oldal',
 				'jegyek-oldal',
 				'Jatekszin-oldal',
