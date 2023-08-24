@@ -25,6 +25,49 @@ const KapcsolatOldal: GlobalConfig = {
 							type: 'upload',
 							relationTo: 'media',
 							required: true
+						},
+						{
+							name: 'contact-infos',
+							label: 'Kapcsolat információk',
+							type: 'array',
+							fields: [
+								{
+									name: 'title',
+									label: 'Cím',
+									type: 'text',
+									required: true
+								},
+								{
+									name: 'address',
+									label: 'Cím',
+									type: 'text',
+									required: false
+								},
+								{
+									name: 'name',
+									label: 'Név',
+									type: 'text',
+									required: false
+								},
+								{
+									name: 'email',
+									label: 'Email',
+									type: 'text',
+									required: true
+								},
+								{
+									name: 'phone',
+									label: 'Telefon',
+									type: 'text',
+									required: false
+								},
+								{
+									name: 'phone2',
+									label: 'Telefon',
+									type: 'text',
+									required: false
+								}
+							]
 						}
 					]
 				}
