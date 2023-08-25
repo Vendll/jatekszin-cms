@@ -27,6 +27,12 @@ const KozadatokPage: GlobalConfig = {
 							required: true
 						},
 						{
+							name: 'content',
+							label: 'Tartalom',
+							type: 'richText',
+							required: true
+						},
+						{
 							name: 'files',
 							label: 'Fájlok',
 							type: 'array',
