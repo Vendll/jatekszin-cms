@@ -4,7 +4,6 @@ import Users from './collections/Users';
 import seo from '@payloadcms/plugin-seo';
 import BeforeDashboard from './components/BeforeDashboard';
 import Media from './collections/Media';
-import GaleriaKep from './collections/GaleriaKep';
 import Eloadasok from './collections/Eloadasok';
 import Munkatars from './collections/Munkatars';
 import Szereplo from './collections/Szereplo';
