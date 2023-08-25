@@ -23,6 +23,11 @@ import TarsulatOldal from './globals/TarsulatPage';
 import JegyekOldal from './globals/JegyekPage';
 import JatekszinOldal from './globals/JatekszinPage';
 import KapcsolatOldal from './globals/KapcsolatPage';
+import AszfPage from './globals/AszfPage';
+import KepEsHangPage from './globals/KepEsHangPage';
+import NyeremenyPage from './globals/NyeremenyPage';
+import ImpresszumPage from './globals/ImpresszumPage';
+import KozadatokPage from './globals/KozadatokPage';
 
 import { cloudStorage } from '@payloadcms/plugin-cloud-storage';
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3';
@@ -86,7 +91,12 @@ export default buildConfig({
 		TarsulatOldal,
 		JegyekOldal,
 		JatekszinOldal,
-		KapcsolatOldal
+		KapcsolatOldal,
+		AszfPage,
+		KepEsHangPage,
+		NyeremenyPage,
+		ImpresszumPage,
+		KozadatokPage
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts')
