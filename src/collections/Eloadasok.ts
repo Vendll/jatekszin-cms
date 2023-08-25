@@ -126,6 +126,83 @@ const Eloadasok: CollectionConfig = {
 							]
 						}
 					]
+				},
+				{
+					label: 'Jegyárak',
+					fields: [
+						{
+							name: 'f1_9',
+							label: 'Földszint: 1-9. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'f10_12',
+							label: 'Földszint: 10-12. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'f13',
+							label: 'Földszint: 10-12. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'f_potszek',
+							label: 'Földszint: pótszék',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'e1',
+							label: 'Erkély: 1. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'e2',
+							label: 'Erkély: 2. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'e3_4',
+							label: 'Erkély: 3-4. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'e5',
+							label: 'Erkély: 5. sor',
+							type: 'number',
+							required: true,
+							admin: {
+								step: 1
+							}
+						}
+					]
 				}
 			]
 		},
