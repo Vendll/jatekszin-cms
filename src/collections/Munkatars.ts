@@ -25,6 +25,16 @@ const Munkatars: CollectionConfig = {
 			type: 'checkbox'
 		},
 		{
+			name: 'alkoto',
+			label: 'Alkotók',
+			type: 'checkbox'
+		},
+		{
+			name: 'vezetoseg',
+			label: 'Vezetőség',
+			type: 'checkbox'
+		},
+		{
 			name: 'thumbnail',
 			label: 'Kép',
 			type: 'upload',
