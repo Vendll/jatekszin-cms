@@ -35,6 +35,12 @@ const Munkatars: CollectionConfig = {
 			type: 'checkbox'
 		},
 		{
+			name: 'titulus',
+			label: 'Titulus',
+			type: 'text',
+			required: false
+		},
+		{
 			name: 'thumbnail',
 			label: 'Kép',
 			type: 'upload',
