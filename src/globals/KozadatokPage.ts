@@ -33,6 +33,26 @@ const KozadatokPage: GlobalConfig = {
 							required: true
 						},
 						{
+							name: 'files',
+							label: 'Fájlok',
+							type: 'array',
+							fields: [
+								{
+									name: 'title',
+									label: 'Cím',
+									type: 'text',
+									required: true
+								},
+								{
+									name: 'file',
+									label: 'Fájl',
+									type: 'upload',
+									relationTo: 'files',
+									required: true
+								}
+							]
+						},
+						{
 							name: 'beszamolok',
 							label: 'Beszámolók',
 							type: 'array',
