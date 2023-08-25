@@ -33,8 +33,48 @@ const KozadatokPage: GlobalConfig = {
 							required: true
 						},
 						{
-							name: 'files',
-							label: 'Fájlok',
+							name: 'beszamolok',
+							label: 'Beszámolók',
+							type: 'array',
+							fields: [
+								{
+									name: 'title',
+									label: 'Cím',
+									type: 'text',
+									required: true
+								},
+								{
+									name: 'file',
+									label: 'Fájl',
+									type: 'upload',
+									relationTo: 'files',
+									required: true
+								}
+							]
+						},
+						{
+							name: 'muveszetiKoncepcio',
+							label: 'Művészeti koncepciónk',
+							type: 'array',
+							fields: [
+								{
+									name: 'title',
+									label: 'Cím',
+									type: 'text',
+									required: true
+								},
+								{
+									name: 'file',
+									label: 'Fájl',
+									type: 'upload',
+									relationTo: 'files',
+									required: true
+								}
+							]
+						},
+						{
+							name: 'jegybeveteliNyilatkozat',
+							label: 'Jegybevételi nyilatkozat',
 							type: 'array',
 							fields: [
 								{
