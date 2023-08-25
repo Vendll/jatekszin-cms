@@ -31,6 +31,33 @@ const JegyekOldal: GlobalConfig = {
 							label: 'Tartalom',
 							type: 'richText',
 							required: true
+						},
+						{
+							name: 'letolthetoMusorok',
+							label: 'Letölthető műsorok',
+							type: 'array',
+							fields: [
+								{
+									name: 'title',
+									label: 'Év, hónap',
+									type: 'text',
+									required: true
+								},
+								{
+									name: 'file',
+									label: 'Fájl',
+									type: 'upload',
+									relationTo: 'files',
+									required: true
+								}
+							]
+						},
+						{
+							name: 'jegyarak',
+							label: 'Jegyárak',
+							type: 'upload',
+							relationTo: 'files',
+							required: true
 						}
 					]
 				}
