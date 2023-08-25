@@ -116,7 +116,12 @@ export default buildConfig({
 				'tarsulat-oldal',
 				'jegyek-oldal',
 				'Jatekszin-oldal',
-				'kapcsolat-oldal'
+				'kapcsolat-oldal',
+				'aszf-oldal',
+				'kep-es-hang-oldal',
+				'nyeremeny-oldal',
+				'impresszum-oldal',
+				'kozadatok-oldal'
 			],
 			generateTitle,
 			generateDescription,
