@@ -73,7 +73,6 @@ export default buildConfig({
 		Kozremukodok,
 		Musor,
 		Media,
-		GaleriaKep,
 		Hirek,
 		Files,
 		Videos,
