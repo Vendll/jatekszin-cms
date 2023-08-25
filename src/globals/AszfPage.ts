@@ -2,7 +2,7 @@ import { GlobalConfig } from 'payload/types';
 
 const AszfPage: GlobalConfig = {
 	slug: 'aszf-oldal',
-	label: 'Játékszín oldal',
+	label: 'ADATKEZELÉSI TÁJÉKOZTATÓ oldal',
 	access: {
 		read: () => true
 	},
