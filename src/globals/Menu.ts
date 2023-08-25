@@ -57,6 +57,12 @@ const Menu: GlobalConfig = {
 			required: true
 		},
 		{
+			name: 'mailchimpLink',
+			label: 'Mailchimp link',
+			type: 'text',
+			required: true
+		},
+		{
 			name: 'jegyLink',
 			label: 'Jegy link',
 			type: 'text',
