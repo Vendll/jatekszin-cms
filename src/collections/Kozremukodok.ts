@@ -58,7 +58,8 @@ const Kozremukodok: CollectionConfig = {
 				{ label: 'Szcenikus', value: 'szcenikus' },
 				{ label: 'Konzultáns', value: 'konzultans' },
 				{ label: 'Rendező munkatársa', value: 'rendezo_munkatarsa' },
-				{ label: 'Társszerző', value: 'tarsszerzo' }
+				{ label: 'Társszerző', value: 'tarsszerzo' },
+				{ label: 'Producer', value: 'producer' }
 			],
 			required: true
 		}
