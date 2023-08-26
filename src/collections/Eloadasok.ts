@@ -134,7 +134,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'f1_9',
 							label: 'Földszint: 1-9. sor',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -143,7 +143,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'f10_12',
 							label: 'Földszint: 10-12. sor',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -152,7 +152,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'f13',
 							label: 'Földszint: 10-12. sor',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -161,7 +161,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'f_potszek',
 							label: 'Földszint: pótszék',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -170,7 +170,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'e1',
 							label: 'Erkély: 1. sor',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -179,7 +179,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'e2',
 							label: 'Erkély: 2. sor',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -188,7 +188,7 @@ const Eloadasok: CollectionConfig = {
 							name: 'e3_4',
 							label: 'Erkély: 3-4. sor',
 							type: 'number',
-							required: true,
+							required: false,
 							admin: {
 								step: 1
 							}
@@ -197,7 +197,16 @@ const Eloadasok: CollectionConfig = {
 							name: 'e5',
 							label: 'Erkély: 5. sor',
 							type: 'number',
-							required: true,
+							required: false,
+							admin: {
+								step: 1
+							}
+						},
+						{
+							name: 'jm',
+							label: 'JULIUS MEInL SZÍNPAD',
+							type: 'number',
+							required: false,
 							admin: {
 								step: 1
 							}
