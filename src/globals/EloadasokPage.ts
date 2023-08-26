@@ -26,6 +26,14 @@ const EloadasokOldal: GlobalConfig = {
 							relationTo: 'media',
 							required: true
 						}
+						{
+							name: 'eloadasok',
+							label: 'Előadások',
+							type: 'relationship',
+							relationTo: 'eloadasok',
+							hasMany: true,
+							required: true,
+						}
 					]
 				}
 			]
