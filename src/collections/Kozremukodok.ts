@@ -43,7 +43,21 @@ const Kozremukodok: CollectionConfig = {
 				{ label: 'Videó', value: 'video' },
 				{ label: 'Rendezőasszisztens', value: 'rendezoasszisztens' },
 				{ label: 'Dramaturgasszisztens', value: 'dramaturgasszisztens' },
-				{ label: 'Fordító', value: 'fordito' }
+				{ label: 'Fordító', value: 'fordito' },
+				{ label: 'Alkotótársak', value: 'alkototarsak' },
+				{ label: 'Világítástervező', value: 'vilagitastervezo' },
+				{ label: 'Szakmai konzultáns', value: 'szakmai_konzultans' },
+				{ label: 'Videógrafika', value: 'videografika' },
+				{ label: 'Koreográfus', value: 'koreografus' },
+				{ label: 'Dalszöveg', value: 'dalszoveg' },
+				{ label: 'Konzultáns', value: 'konzultans' },
+				{ label: 'Zene', value: 'zene' },
+				{ label: 'Jelmez', value: 'jelmez' },
+				{ label: 'Díszlet', value: 'diszlet' },
+				{ label: 'Társastánc', value: 'tarstanc' },
+				{ label: 'Szcenikus', value: 'szcenikus' },
+				{ label: 'Konzultáns', value: 'konzultans' },
+				{ label: 'Rendező munkatársa', value: 'rendezo_munkatarsa' }
 			],
 			required: true
 		}
