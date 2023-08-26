@@ -44,7 +44,7 @@ const Kozremukodok: CollectionConfig = {
 				{ label: 'Rendezőasszisztens', value: 'rendezoasszisztens' },
 				{ label: 'Dramaturgasszisztens', value: 'dramaturgasszisztens' },
 				{ label: 'Fordító', value: 'fordito' },
-				{ label: 'Alkotótársak', value: 'alkototarsak' },
+				{ label: 'Alkotótárs', value: 'alkototars' },
 				{ label: 'Világítástervező', value: 'vilagitastervezo' },
 				{ label: 'Szakmai konzultáns', value: 'szakmai_konzultans' },
 				{ label: 'Videógrafika', value: 'videografika' },
