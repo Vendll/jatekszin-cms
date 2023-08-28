@@ -35,6 +35,11 @@ const Munkatars: CollectionConfig = {
 			type: 'checkbox'
 		},
 		{
+			name: 'kulsos',
+			label: 'Külsős',
+			type: 'checkbox'
+		},
+		{
 			name: 'titulus',
 			label: 'Titulus',
 			type: 'text',
