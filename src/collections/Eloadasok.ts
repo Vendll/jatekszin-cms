@@ -39,9 +39,29 @@ const Eloadasok: CollectionConfig = {
 							required: true
 						},
 						{
+							name: 'eloadasHossza',
+							label: 'Előadás hossza (percben)',
+							type: 'number',
+							required: true
+						},
+						{
+							name: 'szunetekSzama',
+							label: 'Szünetek száma',
+							type: 'number',
+							required: true
+						},
+						{
 							name: 'description',
 							label: 'Leírás',
 							type: 'textarea'
+						},
+						{
+							name: 'otherInfo',
+							label: 'Egyéb információk',
+							type: 'richtext',
+							admin: {
+								elements: ['h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'ul', 'ol', 'link', 'image']
+							}
 						}
 					]
 				},
