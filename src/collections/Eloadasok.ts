@@ -42,13 +42,13 @@ const Eloadasok: CollectionConfig = {
 							name: 'eloadasHossza',
 							label: 'Előadás hossza (percben)',
 							type: 'number',
-							required: true
+							required: false
 						},
 						{
 							name: 'szunetekSzama',
 							label: 'Szünetek száma',
 							type: 'number',
-							required: true
+							required: false
 						},
 						{
 							name: 'description',
