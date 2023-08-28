@@ -58,10 +58,7 @@ const Eloadasok: CollectionConfig = {
 						{
 							name: 'otherInfo',
 							label: 'Egyéb információk',
-							type: 'richText',
-							admin: {
-								elements: ['h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'ul', 'ol', 'link', 'image']
-							}
+							type: 'richText'
 						}
 					]
 				},
