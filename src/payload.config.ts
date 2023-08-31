@@ -104,7 +104,7 @@ export default buildConfig({
 	graphQL: {
 		schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql')
 	},
-	cors: ['http://localhost:5173', 'https://dev.jatekszin.hu'],
+	cors: ['http://localhost:5173', 'https://dev.jatekszin.hu', 'https://www.dev.jatekszin.hu'],
 	plugins: [
 		seo({
 			collections: ['eloadasok', 'hirek'],
