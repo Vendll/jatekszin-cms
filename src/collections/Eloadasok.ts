@@ -129,6 +129,20 @@ const Eloadasok: CollectionConfig = {
 							required: false
 						},
 						{
+							name: 'otherVideos',
+							label: 'További videók',
+							type: 'array',
+							fields: [
+								{
+									name: 'video',
+									label: 'Videó',
+									type: 'upload',
+									relationTo: 'videos',
+									required: false
+								}
+							]
+						},
+						{
 							name: 'galeria',
 							label: 'Galéria',
 							type: 'array',
