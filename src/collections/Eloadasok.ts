@@ -76,6 +76,12 @@ const Eloadasok: CollectionConfig = {
 								allowCreate: true
 							}
 						},
+						{
+							name: 'szereplokSzoveges',
+							label: 'Szereplők kiegszítés',
+							type: 'richText',
+							required: false
+						},
 
 						{
 							name: 'kozremukodok',
