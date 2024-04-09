@@ -64,7 +64,6 @@ const Munkatars: CollectionConfig = {
 		{ label: 'Portások', name: 'portasok', type: 'checkbox' },
 		{ label: 'Nézőtéri munkatársak', name: 'nezoterimunkatars', type: 'checkbox' },
 		{ label: 'Takarító', name: 'takarito', type: 'checkbox' },
-		{ label: 'Vizuál', name: 'vizual', type: 'checkbox' },
 		{
 			name: 'titulus',
 			label: 'Titulus',
