@@ -62,7 +62,8 @@ const Kozremukodok: CollectionConfig = {
 				{ label: 'Producer', value: 'producer' },
 				{ label: 'Divattervező', value: 'divattervezo' },
 				{ label: 'Társastánc', value: 'tarsastanc' },
-				{ label: 'Vizuál', value: 'vizual' }
+				{ label: 'Vizuál', value: 'vizual' },
+				{ label: 'Videóanimáció', value: 'videoanimacio' }
 			],
 			required: true
 		}
